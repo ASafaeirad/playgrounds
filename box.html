@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="./box.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
 </head>
-<body>
 
+<body>
+  <h1 class="title">Box Model</h1>
+  <div class="container">
+    <div class="box-container" id="left">
+      <div class="margin">
+        <div class="el">
+          <div class="border">
+            <div class="el">
+
+              <div class="padding">
+                <div class="content">
+                  Content
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-container" id="right">
+      <div class="margin">
+        <div class="el">
+          <div class="border">
+            <div class="el">
+              <div class="padding">
+                <div class="content">
+                  Content
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="control-panel">
+    <div class="visibility panel">
+      <label class="margin-chk control control--checkbox">
+        Show Margin
+        <input type="checkbox" data-type="margin" onchange="onVisibilityChange(event.target.checked, 'margin')">
+        <div class="control__indicator"></div>
+      </label>
+      <label class="border-chk control control--checkbox">
+        Show Border
+        <input type="checkbox" data-type="border" onchange="onVisibilityChange(event.target.checked, 'border')" checked="checked">
+        <div class="control__indicator"></div>
+      </label>
+      <label class="padding-chk control control--checkbox">
+        Show Padding
+        <input type="checkbox" data-type="padding" onchange="onVisibilityChange(event.target.checked, 'padding')">
+        <div class="control__indicator"></div>
+      </label>
+
+    </div>
+    <div class="left panel">
+      <div class="group">
+        <label class="label" for="">Margin</label>
+        <input id="left-margin-input" onchange="onChange(event, 'left', 'margin')" class="input" placeholder="Margin"
+          type="text">
+      </div>
+      <div class="group">
+        <label class="label" for="">Border</label>
+        <input id="left-border-input" onchange="onChange(event, 'left', 'border')" class="input" placeholder="Border"
+          type="text">
+      </div>
+      <div class="group">
+        <label class="label" for="">Padding</label>
+        <input id="left-padding-input" onchange="onChange(event, 'left', 'padding')" class="input" placeholder="Padding"
+          type="text">
+      </div>
+    </div>
+
+    <div class="right panel">
+      <div class="group">
+        <label class="label" for="">Margin</label>
+        <input id="right-margin-input" onchange="onChange(event, 'right', 'margin')" class="input" placeholder="Margin"
+          type="text">
+      </div>
+      <div class="group">
+        <label class="label" for="">Border</label>
+        <input id="right-border-input" onchange="onChange(event, 'right', 'border')" class="input" placeholder="Border"
+          type="text">
+      </div>
+      <div class="group">
+        <label class="label" for="">Padding</label>
+        <input id="right-padding-input" onchange="onChange(event, 'right', 'padding')" class="input" placeholder="Padding"
+          type="text">
+      </div>
+    </div>
+  </div>
+
+  <script src="./box.js"></script>
 </body>
+
 </html>
