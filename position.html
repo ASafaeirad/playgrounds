@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Position</title>
+  <link rel="stylesheet" href="position.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+</head>
+
+<body>
+  <section class="container">
+    <header class="header">
+      <h1 class="page-title">Positions</h1>
+    </header>
+
+    <section id="parents" class="parents">
+      <section id="parent" class="parent">
+        <button onclick="togglePosition(event);" class="type position" data-for="parent">position: static;</button>
+        <hr />
+        <div id="box" class="child">
+            <h2 class="box-title">BOX 1</h2>
+          <button onclick="togglePosition(event);" class="type position" data-for="box">position: static;</button>
+          <div class="input-container top">
+            <label>top:</label>
+            <input onkeyup="onChange(event, 'top', 'box') " onchange="onChange(event, 'top', 'box') " class="input" id="top" placeholder="unset" type="number">
+            <span class="px">px</span>
+          </div>
+          <div class="input-container right">
+            <label>right:</label>
+            <input onkeyup="onChange(event, 'right', 'box') " onchange="onChange(event, 'right', 'box') " class="input" id="right" placeholder="unset" type="number">
+            <span class="px">px</span>
+          </div>
+          <div class="input-container bottom">
+            <label>bottom:</label>
+            <input onkeyup="onChange(event, 'bottom', 'box') " onchange="onChange(event, 'bottom', 'box') " class="input" id="bottom" placeholder="unset" type="number">
+            <span class="px">px</span>
+          </div>
+          <div class="input-container left">
+            <label>left:</label>
+            <input onkeyup="onChange(event, 'left', 'box') " onchange="onChange(event, 'left', 'box') " class="input" id="left" placeholder="unset" type="number">
+            <span class="px">px</span>
+          </div>
+        </div>
+        <div id="box-2" class="child">
+          <h2 class="box-title">BOX 2</h2>
+          <button onclick="togglePosition(event);" class="type position" data-for="box-2">position: static;</button>
+          <div class="input-container top">
+            <label>top:</label>
+            <input onkeyup="onChange(event, 'top', 'box-2') " onchange="onChange(event, 'top', 'box-2') " class="input" id="top" placeholder="unset" type="number">
+            <span class="px">px</span>
+          </div>
+          <div class="input-container right">
+            <label>right:</label>
+            <input onkeyup="onChange(event, 'right', 'box-2') " onchange="onChange(event, 'right', 'box-2') " class="input" id="right" placeholder="unset" type="number">
+            <span class="px">px</span>
+          </div>
+          <div class="input-container bottom">
+            <label>bottom:</label>
+            <input onkeyup="onChange(event, 'bottom', 'box-2') " onchange="onChange(event, 'bottom', 'box-2') " class="input" id="bottom" placeholder="unset" type="number">
+            <span class="px">px</span>
+          </div>
+          <div class="input-container left">
+            <label>left:</label>
+            <input onkeyup="onChange(event, 'left', 'box-2') " onchange="onChange(event, 'left', 'box-2') " class="input" id="left" placeholder="unset" type="number">
+            <span class="px">px</span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </section>
+  <script src="position.js"></script>
+</body>
+
+</html>

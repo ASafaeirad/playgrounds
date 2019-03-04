@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <title>Frontend Web Development</title>
+    <link rel="stylesheet" href="selector.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+  </head>
+
+  <body>
+    <h class="container">
+      <header class="header">
+        <!-- <h1 class="page-title">CSS Selectors Playground</h1> -->
+        <input id="txtSelector" type="text" name="selector" placeholder="SELECT ELEMENT...">
+      </header>
+
+      <section id="parents" class="parents">
+        <section id="parent1" class="parent male">
+          <span class="parent-title">id="parent1"<br />class="parent male"</span>
+          <hr />
+          <section class="children">
+            <div class="child odd prime"><span class="type">div</span>class="odd prime"</div>
+            <div class="child even"><span class="type">div</span>class="even"</div>
+            <div class="child odd prime"><span class="type">div</span>class="odd prime"</div>
+            <button class="child even odd"><span class="type">button</span>class="even odd"</button>
+            <span class="child even"><span class="type">span</span>class="even"</span>
+          </section>
+        </section>
+        <section id="parent2" class="parent female">
+          <span class="parent-title">id="parent2"<br />class="parent female"</span>
+          <hr />
+          <section class="children">
+            <div class="child odd prime"><span class="type">div</span>class="odd prime"</div>
+            <div class="child even"><span class="type">div</span>class="even"</div>
+            <button id="special" class="child odd"><span class="type">button</span>id="special"<br />class="odd"</button>
+            <span class="child even"><span class="type">span</span>class="even"</span>
+            <div class="child even prime"><span class="type">div</span>class="even prime"</div>
+          </section>
+        </section>
+        <section id="parent3" class="parent male">
+          <span class="parent-title">id="parent3"<br />class="parent male"</span>
+          <hr />
+          <section class="children">
+            <div class="child odd"><span class="type">div</span>class="odd"</div>
+            <div class="child even"><span class="type">div</span>class="even"</div>
+            <button class="child odd"><span class="type">button</span>class="odd"</button>
+            <span class="child even"><span class="type">span</span>class="even"</span>
+            <div class="child even"><span class="type">div</span>class="even"</div>
+          </section>
+        </section>
+        <section id="grand-parent" class="male">
+          <span class="parent-title">id="grand-parent"<br />class="male"</span>
+          <hr />
+          <section class="children">
+            <div class="child odd"><span class="type">div</span>class="odd"</div>
+            <div class="child even"><span class="type">div</span>class="even"</div>
+            <button class="child odd prime"><span class="type">button</span>class="odd prime"</button>
+            <span class="child even"><span class="type">span</span>class="even"</span>
+            <div class="child even"><span class="type">div</span>class="even"</div>
+          </section>
+        </section>
+      </section>
+    </section>
+    <script src="selector.js"></script>
+  </body>
+
+</html>
