@@ -18,19 +18,46 @@ body {
   font-family: Raleway;
 }
 
+#selector {
+  font-family: inherit;
+  padding: 8px 10px;
+  background: transparent;
+  border-width: 0 0 1px 0;
+  font-size: 1.7em;
+  color: #eee;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-color: #eee;
+  width: 800px;
+  text-align: center;
+}
+
+#selector:focus {
+  border-color: #fc830a !important;
+  outline: none;
+}
+
+.container__header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.container__title {
+  color: #eee;
+  font-size: 1.7em;
+  font-family: Segoe UI Light;
+  margin: 15px;
+}
+
 .parents {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
-}
-
-.container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
   width: 100%;
 }
 
@@ -43,7 +70,6 @@ body {
   padding: 1em 0 1em;
 }
 
-#grand-parent,
 .parent {
   flex: 0 0 250px;
   display: flex;
@@ -58,7 +84,22 @@ body {
   min-height: 480px;
 }
 
-.parent-title {
+.parent.selected {
+  color: #222;
+  border: 1px dashed #fc830a;
+  box-shadow: 0 2px 10px rgba(252, 131, 10, .5);
+  transform: translate(0, -3px) !important;
+  background-color: #eee;
+}
+
+.parent__id {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.parent__class {
   display: block;
   text-align: center;
   font-size: 20px;
@@ -66,11 +107,23 @@ body {
   margin-bottom: .5em;
 }
 
-hr {
+.parent__hr {
   margin-bottom: 1em;
   width: 100%;
   border: 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, .2);
+  border-bottom: 1px dashed rgba(255, 255, 255, .2);
+}
+
+.selected .parent__hr {
+  border-color: #fc830a;
+}
+
+.type {
+  background: #ffb3568f;
+  color: #333;
+  padding: 1px 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
 }
 
 .child {
@@ -93,57 +146,11 @@ hr {
 
 .child.selected {
   background: #ffd000 !important;
-  box-shadow: 0 5px 10px rgba(252, 131, 10, .5), inset 0 0px 25px rgba(255, 221, 43, 0.5) !important;
+  box-shadow: 0 5px 10px rgba(252, 131, 10, .5), inset 0 0 25px rgba(255, 221, 43, 0.5) !important;
   color: #222 !important;
   transform: translate(0, -3px) !important;
 }
 
 .child.selected .type {
   background: rgba(255, 255, 255, .9) !important;
-}
-
-.type {
-  background: #ffb3568f;
-  color: #333;
-  padding: 1px 10px;
-  margin-bottom: 5px;
-  border-radius: 4px;
-}
-
-#grand-parent.selected,
-.parent.selected {
-  color: #222;
-  border: 1px dashed #fc830a;
-  box-shadow: 0 2px 10px rgba(252, 131, 10, .5);
-  transform: translate(0, -3px) !important;
-  background-color: #eee;
-}
-
-.header {
-  margin: 1em;
-}
-
-#txtSelector {
-  padding: 8px 10px;
-  background: transparent;
-  border-width: 0 0 1px 0;
-  font-size: 2em;
-  color: #eee;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-color: #eee;
-  width: 800px;
-  text-align: center;
-}
-
-#txtSelector:focus {
-  border-color: #fc830a !important;
-  outline: none;
-}
-
-.page-title {
-  color: #eee;
-  font-size: 2em;
-  font-family: Segoe UI Light;
-  margin: 15px;
 }
